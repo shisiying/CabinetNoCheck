@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/details/details"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#2E3238",
+    "navigationBarTitleText": "柜号快查",
+    "navigationBarTextStyle":"white"
+  }
+}

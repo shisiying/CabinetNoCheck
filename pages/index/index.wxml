@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view animation="{{animationError}}" class='showError' hidden='{{!errorShow}}'>
+    <text>{{errorText}}</text>
+</view>
+
+<scroll-view scroll-y='true' style='min-height:1500rpx;overflow:auto'>
+  <view class='header-search'>
+    <view>
+      <image src='../../images/header-banner.png' style='width:750rpx;height:375rpx'></image>
+    </view>
+
+    <view class='header-title'>
+        <view class='header-input'>
+          <view class='input-wrap'>
+              <input type='text' placeholder="你要查询的名字" value='{{username}}' bindinput ='username'/>
+              <view hidden='{{!(username.length>0)}}' class='clear-imput-img'><icon type='clear' size='14' color='#B2B2B2' bindtap='clear'></icon></view>
+          </view>
+        </view>
+    </view> 
+  </view>
+
+  <view class='note-title history-bar'>
+      <view class='yello-bar'></view>
+      <view class='search-history'>注意</view>
+  </view>
+  <view class='note-area'>
+    <view class='note-text'>授权后一天只能查3次,分享后可增加一次，最多查5次！</view>
+  </view>
+  <view class='history-bar'>
+      <view class='yello-bar'></view>
+      <view class='search-history'>查询记录</view>
+  </view>
+  <block  class="history-block" wx:for="{{historySearch}}">
+    <button class='history-name' bindtap="historySearch" data-name="{{item.name}}">
+          <view class='history-item'>
+              <view class='history-title'>{{item.name}}</view>
+              <view class='history-detail'>最新取件:{{item.data.container}}</view>
+          </view>
+    </button>
+  </block>
+</scroll-view>
+
+ <view class='search-btn'>
+    <button class='search-title' open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap='search'>立即查询</button>
+  </view>
+
+   <view class='share'>
+      <button class='share-btn' open-type='share'>分享</button>
+  </view>
+
+   <view class='contact'>
+      <button class='contact-btn' bindtap='feed'>联系</button>
+  </view>

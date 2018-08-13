@@ -1,0 +1,65 @@
+/* pages/details/details.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 26rpx;
+}
+
+.mar{
+  margin-left: 80rpx;
+  margin-top: 40rpx;
+  width: 80%;
+  height:17rpx;
+  background: #efeff4;
+}
+
+.table {
+  border: 0px solid darkgray;
+  margin-top: 50rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    font-size: 30rpx;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background-color:#fbd756;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.time-text{
+  font-size: 20rpx;
+}
+

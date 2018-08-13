@@ -1,0 +1,38 @@
+<!--pages/details/details.wxml-->
+<view class='fix-user'>
+  <view class="userinfo">
+    <block>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+    
+<scroll-view scroll-y='true' style='min-height:1000rpx;overflow:hidden'>
+
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">货柜号</view>
+      <view class="th">姓名</view>
+      <view class="th ">收件时间</view>
+      <view class="th ">取件时间</view>
+    </view>
+    <block wx:for="{{listdata}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+         <view class="td">{{item.container}}</view>
+        <view class="td">{{item.name}}</view>
+        <view class="td time-text">{{item.receive_time}}</view>
+        <view class="td time-text">{{item.get_time}}</view>
+      </view>
+
+      <view class="tr" wx:else>
+        <view class="td">{{item.container}}</view>
+        <view class="td">{{item.name}}</view>
+        <view class="td time-text">{{item.receive_time}}</view>
+        <view class="td time-text">{{item.get_time}}</view>
+      </view>
+
+    </block>
+  </view>
+
+</scroll-view>
